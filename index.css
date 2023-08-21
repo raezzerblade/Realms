@@ -1,0 +1,157 @@
+@keyframes animatedBackground {
+	from { background-position: 0 0; }
+	to { background-position: 100% 0; }
+}
+
+body {
+    background-image: url('art/Background_Index.jpg');
+    background-position: 0px 0px;
+	background-repeat: repeat-x;
+
+    animation: animatedBackground 40s linear infinite;
+    background-color: rosybrown;
+}
+
+h1 {
+    background-color: purple;
+}
+
+/* Base styles for the boxes */
+.box {
+    background-color: #f5e7d8; /* a slightly lighter shade of bisque */
+    width: 450px;
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    transition: box-shadow 0.3s ease;
+}
+
+.box:hover {
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.15);
+}
+
+#chatBox {
+    height: 400px;
+    margin-top: 60px; /* Reduced the margin-top for better proximity and spacing */
+}
+/* --- formBox Styles --- */
+#formBox {
+    background-color: #f5e7d8;
+    width: 450px;
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    transition: box-shadow 0.3s ease;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+#formBox:hover {
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.15);
+}
+
+#formBox p {
+    font-weight: bold;
+    font-size: 1.2em;
+    text-align: center;
+}
+
+#formBox form {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+#formBox label {
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+
+.inputText {
+    padding: 10px;
+    border-radius: 4px;
+    border: 1px solid #cccccc;
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.inputText:focus {
+    border-color: #0099cc;
+    box-shadow: 0 0 0 2px rgba(0, 153, 204, 0.1);
+    outline: none;
+}
+
+#hostSubmit, #joinSubmit {
+    padding: 10px 15px;
+    border: none;
+    border-radius: 4px;
+    background-color: #007acc;
+    color: #ffffff;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+#hostSubmit:hover, #joinSubmit:hover {
+    background-color: #0061a0;
+}
+
+#joinSubmit {
+    margin-top: 10px;
+}
+
+/* --- chatBox Styles --- */
+#chatBox {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    background-color: #f5e7d8;
+    width: 450px;
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    transition: box-shadow 0.3s ease;
+    display: flex;
+    flex-direction: column;
+}
+
+#chatBox:hover {
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.15);
+}
+
+#textBox {
+    flex-grow: 1;
+    background-color: #ffffff;
+    border-radius: 8px;
+    padding: 10px;
+    box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.1);
+    overflow-y: auto;
+    margin-bottom: 10px;
+}
+
+#typeBox {
+    display: flex;
+    align-items: center;
+}
+
+#typeArea {
+    flex-grow: 1;
+    padding: 10px;
+    border-radius: 4px;
+    border: 1px solid #cccccc;
+    margin-right: 10px;
+    resize: none;
+}
+
+#clearChat {
+    padding: 6px 12px;
+    border: none;
+    border-radius: 4px;
+    background-color: #f36f6f;
+    color: #ffffff;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+#clearChat:hover {
+    background-color: #e25656;
+}

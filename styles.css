@@ -1,0 +1,410 @@
+body {
+    background-image: url("art/Ocean.jpg");
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position: center;
+    background-size: 100%;
+    margin:0;
+    padding:0;
+}
+
+h1 {
+    text-align: center;
+    font-family:cursive;
+    font-weight: normal;
+    background-color: lightblue;
+    margin:0;
+    border:5px solid black;
+    padding:5px;
+}
+
+/* SHIPS */
+
+.ship {
+    width:100px;
+    position:relative;
+    display:block;
+}
+#NWship {
+    top: -410px;
+    left: -550px;
+}
+#SWship {
+    left: -470px;
+    top: 75px;
+}
+#NEship {
+    top: -485px;
+    left: -180px;
+    transform: scaleX(-1);
+}
+#SEship {
+    transform: scaleX(-1);
+    left:5px;
+}
+
+/* HEXAGON TILES */
+
+#board {
+    margin:0 auto;
+    width:825px;
+    margin-top:10px;
+}
+.column {
+    position:relative;
+}
+#col1 {
+    float:left;
+    top:164px;
+    left:72px;
+}
+#col2 {
+    float:left; 
+    top:123px;
+    left:54px;
+ }
+ #col3 {
+    float:left; 
+    top:82px;
+    left:36px;
+ }
+ #col4 {
+    float:left; 
+    top:41px;
+    left:18px;
+ }
+ #col5 {
+    float:left;
+ }
+ #col6 {
+    float:left;
+    float:left; 
+    top:41px;
+    left:-18px;
+ }
+ #col7 {
+    float:left;
+    top:82px;
+    left:-36px;
+ }
+ #col8 {
+    float:left;
+    top:123px;
+    left:-54px;
+ }
+ #col9 {
+    float:left;
+    top:164px;
+    left:-72px;
+ }
+
+ .tile {
+    position:relative;
+ }
+ .tileUnit {
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index:9;
+ }
+ .tileBuilding {
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index:9;
+ }
+
+ /* effects */
+ .tileType {
+    width:90px;
+    filter: drop-shadow(0px 0px 5px black);
+    z-index:.8;
+}
+.tileType:hover {
+    filter: brightness(150%);
+}
+.tileType:active {
+    filter: contrast(3);
+}
+
+/* MOVEABLES */
+
+.piece {
+    position:absolute;
+    width: 30px;
+    z-index:4;
+}
+.pieceBoard {
+    margin-top:25px;
+    margin-left:5px;
+}
+.buildingBoard {
+    margin-top:20px;
+    margin-left:38px;
+}
+.building {
+    position:absolute;
+    width: 45px;
+    z-index:3;
+}
+
+.pieces img {
+    border-radius: 50%;
+    overflow: hidden;
+}
+.buildings img {
+    border-radius: 50%;
+    overflow: hidden;
+}
+
+/* PLAYERS */
+.pBar {
+    background-color: red;
+    box-shadow: 0 0 10px red;
+    border-radius: 50%;
+    overflow: hidden;
+}
+.p0 {
+    background-color: lightgrey;
+    box-shadow: 0 0 10px lightgrey;
+    border-radius: 50%;
+    overflow: hidden;
+}
+.p1 {
+    background-color: aqua;
+    box-shadow: 0 0 10px aqua;
+    border-radius: 50%;
+    overflow: hidden;
+}
+.p2 {
+    background-color: pink;
+    box-shadow: 0 0 10px pink;
+    border-radius: 50%;
+    overflow: hidden;
+}
+.p3 {
+    background-color: yellow;
+    box-shadow: 0 0 10px yellow;
+    border-radius: 50%;
+    overflow: hidden;
+}
+.p4 {
+    background-color: limegreen;
+    box-shadow: 0 0 10px limegreen;
+    border-radius: 50%;
+    overflow: hidden;
+}
+
+/* PLAYER 1 */
+
+.p0.set.barbarian {
+    margin-left: 175px;
+    margin-top: 75px;
+}
+.p0.set.king {
+    margin-left: 25px;
+    margin-top: 25px;
+}
+.p0.set.villager {
+    margin-left: 75px;
+    margin-top: 25px;
+}
+.p0.set.priest {
+    margin-left: 125px;
+    margin-top: 25px;
+}
+.p0.set.cavalry {
+    margin-left: 25px;
+    margin-top: 75px;
+}
+.p0.set.archer {
+    margin-left: 75px;
+    margin-top: 75px;
+}
+.p0.set.hoplite {
+    margin-left: 125px;
+    margin-top: 75px;
+}
+.p0.set.market {
+    margin-left: 25px;
+    margin-top: 125px;
+}
+.p0.set.temple {
+    margin-left: 95px;
+    margin-top: 125px;
+}
+.p0.set.library {
+    margin-left: 165px;
+    margin-top: 125px;
+}
+.p0.set.castle {
+    margin-left: 25px;
+    margin-top: 195px;
+}
+.p0.set.village {
+    margin-left: 95px;
+    margin-top: 195px;
+}
+.p0.set.wall {
+    margin-left: 165px;
+    margin-top: 195px;
+}
+.p0.set.road {
+    margin-left: 235px;
+    margin-top: 195px;
+}
+
+/* Resources */
+
+.RecCon {
+    display: flex;
+    align-items: center;
+    height: 25px;
+    font-size: 12px;
+    font-weight: bold;
+}
+.RNum {
+    margin-top: auto;
+}
+.water {
+    background-color: lightblue;
+}
+.wood {
+    background-color: lightgreen;
+}
+.food {
+    background-color: lightyellow;
+}
+.iron {
+    background-color: crimson;
+}
+.gold {
+    background-color: gold;
+}
+
+/* player 1 */
+
+#collect {
+    margin-top: 50px;
+    margin-left: 230px;
+}
+#waterBox {
+    margin-top: 0px;
+    margin-left: 10px;
+}
+#woodBox {
+    margin-top: 0px;
+    margin-left: 110px;
+}
+#foodBox {
+    margin-top: 0px;
+    margin-left: 210px;
+}
+#ironBox {
+    margin-top: 50px;
+    margin-left: 10px;
+}
+#goldBox {
+    margin-top: 50px;
+    margin-left: 110px;
+}
+#info {
+    border: 2px solid black;
+    width: 285px;
+    margin: 10px;
+    position:absolute;
+}
+.pieces {
+    border: 2px solid black;
+    width: 315px;
+    height: 250px;
+    position:absolute;
+    margin-top: 80px;
+}
+#resources {
+    border: 2px solid black;
+    width: 315px;
+    height: 75px;
+    margin-top: 340px;
+    position:absolute;
+}
+#resources div {
+    position: absolute;
+}
+#display {
+    position: absolute;
+    border: 2px solid black;
+    margin-top: 430px;
+    margin-left:10px;
+    width: 305px;
+}
+#chatBox {
+    position:absolute;
+    border: 2px solid black;
+    width: 350px;
+    height: 210px;
+    margin-top: 520px;
+    margin-left: 10px;
+}
+#chatDisplay {
+    height: 170px;
+    width: 350px;
+    overflow:scroll;
+}
+#typeArea {
+    width: 90%;
+}
+#cardBox {
+    margin-left:1080px;
+    width:350px;
+    height: 500px;
+    position:absolute;
+    margin-top:0px;
+    border: 2px solid black;
+}
+#cardDescription {
+    position: fixed;
+    top: 10px;
+    right: 10px;
+    width: 200px;
+    height: 200px;
+    display: none;
+    background-color: #eee;
+    border: 1px solid #ccc;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    z-index:10;
+}
+#rulePopBox {
+    position: fixed;
+    top: 50%;
+    left: 50%; /* Add this line */
+    width: 600px;
+    height: 600px;
+    transform: translate(-50%, -50%); /* Add this line */
+    display: none;
+    background-color: #eee;
+    border: 1px solid #ccc;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    z-index:10;
+    border: dotted black 6px;
+    white-space: pre-line;
+}
+#ruleBox {
+    position:absolute;
+    width:370px;
+    height:220px;
+    margin-left: 1050px;
+    margin-top: 520px;
+    border: 2px solid black;
+}
+#ruleBox h4 {
+    margin:10px 0 0 0;
+}
+
+#costUnit {
+    margin-left: 5px;
+}
+#costBuilding {
+    margin-left: 200px;
+    margin-top: -155px;
+}
